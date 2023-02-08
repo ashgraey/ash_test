@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="vending-machine">
+      <h1>Food Ticket Vending Machine</h1>
+      <div id="display">
+        <p id="message"></p>
+        <ul id="menu"></ul>
+      </div>
+      <div id="controls">
+        <input type="text" id="amount-input" />
+        <button id="deposit-button">Deposit</button>
+        <button id="purchase-button" disabled>Purchase</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const ticketVendingMachine = {
+      menu: [
+        { name: "Hamburger", price: 5.0 },
+        { name: "Hotdog", price: 3.5 },
+        { name: "Pizza", price: 7.0 },
+        { name: "Soft Drink", price: 2.0 },
+      ],
+      balance: 0,
+      displayMessage: function (message) {
+        document.querySelector("#message").textContent = message;
+      },
+      displayMenu: function () {
+        const menuList = document.querySelector("#menu");
+        menuList.innerHTML = "";
+        this.menu.forEach(function (item, index) {
+          const menuItem = document.createElement("li");
+          menuItem.textContent =
+            index + 1 + ". " + item.name + " - $" + item.price;
+          menuList.appendChild(menuItem);
+        });
+      },
+      deposit: function () {
+        const amountInput = document.querySelector("#amount-input");
+        const amount = parseFloat(amountInput.value);
+        if (isNaN(amount) || amount <= 0) {
+          this.displayMessage(
+            "Invalid amount. Please enter a positive number."
+          );
+        } else {
+          this.balance += amount;
+          this.displayMessage(
+            "Deposited $" + amount + ". Current balance: $" + this.balance
+          );
+          amountInput.value = "";
+          document.querySelector("#purchase-button").disabled = false;
+        }
+      },
+      makePurchase: function () {
+        const menuIndex =
+          parseInt(
+            prompt("Enter the number of the item you want to purchase:")
+          ) - 1;
+        if (menuIndex >= 0 && menuIndex < this.menu.length) {
+          if (this.balance >= this.menu[menuIndex].price) {
+            this.balance -= this.menu[menuIndex].price;
+            this.displayMessage(
+              "Purchased " +
+                this.menu[menuIndex].name +
+                " for $" +
+                this.menu[menuIndex].price +
+                ". Current balance: $" +
+                this.balance
+            );
+          } else {
+            this.displayMessage(
+              "Insufficient balance. Please deposit more money."
+            );
+          }
+        } else {
+          this.displayMessage("Invalid menu item. Please try again.");
+        }
+      },
+    };
+
+    ticketVendingMachine.displayMenu();
+    document
+      .querySelector("#deposit-button")
+      .addEventListener("click", function () {
+        ticketVendingMachine.deposit();
+      });
+    document.querySelector("#purchase-button").addEvent;
+  </script>
+</html>
