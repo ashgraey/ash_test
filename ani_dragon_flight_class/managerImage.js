@@ -1,14 +1,15 @@
 import { NodeImage } from "./nodeImage.js";
+import { ManagerGame } from "./managerGame.js";
 
 export class ManagerImage {
-    static instance = new ManagerImage();
+    static instance = new ManagerImage()
     static getInstance() {
         return this.instance;
     }
 
     // init같은 역할(초기화)
     start() {
-        this.imagelist = {};
+        this.imageList = {};
         this.managerImageSetList()
     }
 
@@ -18,38 +19,38 @@ export class ManagerImage {
         this.managerImageSet("title", 400, 600, "image/title.png");
 
         // backGround
-        this.managerImageSet("bg1", 400, 500, "image/stage_01.png", 0.5);
-        this.managerImageSet("bg2", 400, 500, "image/stage_01.png", 0.5);
-        this.managerImageSet("bg3", 400, 500, "image/stage_01.png", 0.5);
+        this.managerImageSet("bg1", 400, 500, "image/stage_01.png");
+        this.managerImageSet("bg2", 400, 500, "image/stage_01.png");
+        this.managerImageSet("bg3", 400, 500, "image/stage_01.png");
 
-        // gameOver
-        this.managerImageSet("gameover", 150, 80, "image/gameover.jpg");
+        // // gameOver
+        // this.managerImageSet("gameover", 150, 80, "image/gameover.jpg");
 
-        // player
-        this.managerImageSet("player", 50, 50, "image/gameover.jpg");
-        this.managerImageSet("heart", 60, 50, "image/heart.png");
+        // // player
+        // this.managerImageSet("player", 50, 50, "image/gameover.jpg");
+        // this.managerImageSet("heart", 60, 50, "image/heart.png");
 
-        // bolt
-        this.managerImageSet("bolt1", 40, 40, "image/bolt1.png");
-        this.managerImageSet("bolt2", 40, 40, "image/bolt2.png");
-        this.managerImageSet("bolt3", 40, 40, "image/bolt3.png");
+        // // bolt
+        // this.managerImageSet("bolt1", 40, 40, "image/bolt1.png");
+        // this.managerImageSet("bolt2", 40, 40, "image/bolt2.png");
+        // this.managerImageSet("bolt3", 40, 40, "image/bolt3.png");
 
-        // enemy
-        this.managerImageSet("enemy1", 50, 50, "image/enmey1.png");
+        // // enemy
+        // this.managerImageSet("enemy1", 50, 50, "image/enmey1.png");
 
-        // item 
-        this.managerImageSet("item1", 50, 50, "image/item1.png");
+        // // item 
+        // this.managerImageSet("item1", 50, 50, "image/item1.png");
 
-        // meteo
-        this.managerImageSet("meteo1", 80, 80, "image/meteo1.png");
-        this.managerImageSet("meteo2", 80, 80, "image/meteo2.png");
+        // // meteo
+        // this.managerImageSet("meteo1", 80, 80, "image/meteo1.png");
+        // this.managerImageSet("meteo2", 80, 80, "image/meteo2.png");
 
         // stage 
         this.managerImageSet("stage1", 400, 500, "image/stage_01.png");
-        this.managerImageSet("stage1", 400, 500, "image/stage_02.png");
-        this.managerImageSet("stage1", 400, 500, "image/stage_03.png");
-        this.managerImageSet("stage1", 400, 500, "image/stage_04.png");
-        this.managerImageSet("stage1", 400, 500, "image/stage_05.png");
+        this.managerImageSet("stage2", 400, 500, "image/stage_02.png");
+        this.managerImageSet("stage3", 400, 500, "image/stage_03.png");
+        this.managerImageSet("stage4", 400, 500, "image/stage_04.png");
+        this.managerImageSet("stage5", 400, 500, "image/stage_05.png");
 
 
 

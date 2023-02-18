@@ -1,4 +1,4 @@
-import { ManagerGame } from "./managerGame";
+import { ManagerGame } from "./managerGame.js";
 
 export class NodeImage {
     constructor(w, h, imagePath) {
@@ -11,7 +11,7 @@ export class NodeImage {
         this.image.src = imagePath;
     }
 
-    nodeImage(x, y) {
+    nodeImageDraw(x, y) {
         // ctx.drawImage() => ctx 메서드
         // nodeImage()에서 그림을 그린다.
         // ctx.drawImage(new Image, 좌표 x, 좌표 y, 가로, 세로)

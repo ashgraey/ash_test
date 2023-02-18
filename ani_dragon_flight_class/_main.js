@@ -8,12 +8,18 @@ function draw() {
   ManagerGame.getInstance().draw();
 }
 
+function loading() {
+  setInterval(draw, 10);
+}
+
 // 캔버스
-var $canvas = document.getElementById("mycanvas");
+var $canvas = document.getElementById("myCanvas");
 var ctx = $canvas.getContext("2d");
 
 // 시작
 // 1 
 ManagerGame.getInstance().start(ctx);
+
+$canvas.style.border = "1px solid black";
 // 2 
-setInterval(draw, 10);
+setTimeout(loading, 10);
