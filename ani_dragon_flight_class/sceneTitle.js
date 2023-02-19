@@ -8,6 +8,9 @@ export class SceneTitle{
         document.addEventListener("keyDown", this.keyDownManager);
     }
 
+    update() {
+        
+    }
 
     draw() {
         ManagerImage.getInstance().managerImageDraw("title", 0, 250);

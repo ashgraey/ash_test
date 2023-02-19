@@ -18,14 +18,14 @@ export class ManagerScene {
         this.curSceneName = "";
     }
 
-    // curScene이 없으면 update
+    // curScene에 값이 있으면 SceneTitle에서 update()
     update() {
         if(this.curScene != null) {
             this.curScene.update()
         }
     }
 
-    // curScene이 없으면 draw
+    // curScene에 값이 있으면 SceneTitle에서 draw()
     draw() {
         if(this.curScene != null) {
             this.curScene.draw()
@@ -35,7 +35,7 @@ export class ManagerScene {
     // scene setting
     setScene() {
         this.sceneList["title"] = new SceneTitle();
-        // this.sceneList["stage"] = new SceneStage();
+        this.sceneList["stage"] = new SceneStage();
         // this.sceneList["gameover"] = new SceneGameOver();
     }
 

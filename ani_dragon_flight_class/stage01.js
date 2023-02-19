@@ -1,18 +1,18 @@
-// import { UnitCloudList } from "./unitCloudList.js";
-// export class Stage01{
-//     start(){  
-//         this.cloudList = new UnitCloudList();
+import { BackGroundList } from "./BackGroundList.js";
+export class Stage01{
+    start(){  
+        this.bgList = new BackGroundList();
   
-//     }
+    }
    
-//     update(){
-//         this.cloudList.update();
+    update(){
+        this.bgList.update();
 
-//     }
+    }
 
-//     draw(){
-//         this.cloudList.draw();
+    draw(){
+        this.bgList.draw();
 
-//     }
+    }
    
-// }
+}

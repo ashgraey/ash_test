@@ -1,7 +1,15 @@
-// import { ManagerGame } from "./managerGame.js";
-// import { ManagerImage } from "./managerImage.js";
-// import { ManagerScene } from "./managerScene.js";
+import { ManagerStage } from "./managerStage.js";
 
 export class SceneStage{
+
+    start() {
+        this.curStage = ManagerStage.getInstance().getCurStage();
+        this.curStage.start()
+    }
+
+    update() {
+        this.curStage.update();
+        
+    }
     
 }
