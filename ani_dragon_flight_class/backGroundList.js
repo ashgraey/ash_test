@@ -15,6 +15,26 @@ export class BackGroundList {
         }
     }
 
+
+    update() {
+        // console.log(this.bgList);
+        for(let i = 0; i < this.bgList.length; i++ ) {
+            this.bgList[i].y += this.bgList[i].speed;
+            // 예외처리
+            if(this.bgList[i].y >= 1000) {
+                this.bgList[i].y = -500;
+            }
+        }
+    }
+
+    draw() {
+    
+        for(let i = 0; i < this.bgList.length; i++) {
+            var backGround = this.bgList[i];
+            // console.log(backGround);
+            ManagerImage.getInstance().managerImageDraw(backGround.name, backGround.x, backGround.y);
+        }
+    }
     
 
 

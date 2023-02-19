@@ -3,7 +3,7 @@ import { ManagerGame } from "./managerGame.js";
 function draw() {
   ctx.clearRect(0, 0, $canvas.width, $canvas.height);
 
-  // 초기화 식
+  // update이후 draw
   ManagerGame.getInstance().update();
   ManagerGame.getInstance().draw();
 }

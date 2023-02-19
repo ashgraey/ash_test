@@ -16,7 +16,7 @@ export class ManagerImage {
     // imageList객체 생성
     managerImageSetList() {
         // title 
-        this.managerImageSet("title", 400, 600, "image/title.png");
+        this.managerImageSet("title", 400, 800, "image/title.png");
 
         // backGround
         this.managerImageSet("bg1", 400, 500, "image/stage_01.png");
