@@ -1,6 +1,4 @@
 import { Stage01 } from "./stage01.js";
-// import { Stage02 } from "./stage02.js";
-// import { StageTest1 } from "./stageTest1.js";
 
 export class ManagerStage {
     static instance = new ManagerStage();

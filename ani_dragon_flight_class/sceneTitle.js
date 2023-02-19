@@ -3,27 +3,32 @@ import { ManagerImage } from "./managerImage.js";
 import { ManagerScene } from "./managerScene.js";
 // import { ManagerKey } from "./managerScene.js";
 
-export class SceneTitle{
+export class SceneTitle {
     start() {
-        document.addEventListener("keyDown", this.keyDownManager);
+        console.log("yes")
+        document.addEventListener("click", this.mouseClickEvent, true);
     }
-
     update() {
-        
+
     }
 
     draw() {
-        ManagerImage.getInstance().managerImageDraw("title", 0, 250);
+        // console.log("yes");
+        ManagerImage.getInstance().managerImageDraw("title", 0, 0);
     }
-    
-    keyDownManager = (e) => {
-        if(ManagerScene.getInstance().curSceneName != "title") {
+
+    mouseClickEvent = (e) => {
+        console.log("click")
+        console.log(ManagerScene.getInstance().curSceneName);
+        if (ManagerScene.getInstance().curSceneName != "title") {
             return;
         }
         ManagerScene.getInstance().changeScene("stage");
         // 트리거 역할
         e.stopImmediatePropagation();
 
+
+
     }
-    
+
 }

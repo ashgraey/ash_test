@@ -12,4 +12,7 @@ export class SceneStage{
         
     }
     
+    draw() {
+        this.curStage.draw()
+    }
 }
