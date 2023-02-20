@@ -58,21 +58,21 @@ export class UnitTestPlayer {
         var k = ManagerKey.getInstance().getKeyOnce("KeyK");
         console.log(d);
 
-        // if(j){
-        //     if(this.direction == "left"){    
-        //         ManagerSkill.getInstance().managerSkillPlay("skillSword" , "skill_sword_l", this.xPos - 150 , this.yPos +50  , "left" , this.power);
-        //     }else if(this.direction == "right"){
-        //         ManagerSkill.getInstance().managerSkillPlay("skillSword" , "skill_sword_r", this.xPos + 150 , this.yPos +50 , "right" , this.power);
-        //     }
-        // }
+        if(j){
+            if(this.direction == "left"){    
+                ManagerSkill.getInstance().managerSkillPlay("skillSword" , "skill_sword_l", this.xPos - 150 , this.yPos +50  , "left" , this.power);
+            }else if(this.direction == "right"){
+                ManagerSkill.getInstance().managerSkillPlay("skillSword" , "skill_sword_r", this.xPos + 150 , this.yPos +50 , "right" , this.power);
+            }
+        }
 
-        // if(k){
-        //     if(this.direction == "left"){        
+        if(k){
+            if(this.direction == "left"){        
              
-        //     }else if(this.direction == "right"){
+            }else if(this.direction == "right"){
              
-        //     }
-        //  }
+            }
+         }
 
         if(d){
             this.animationList.nodeAnimListChangeAnim("player");
@@ -107,7 +107,7 @@ export class UnitTestPlayer {
 
    draw(){
         this.animationList.nodeAnimListDraw(this.xPos , this.yPos);
-      //  this.drawBox();
+    //    this.drawBox();
 
     }
 
