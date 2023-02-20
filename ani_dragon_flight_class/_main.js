@@ -17,7 +17,7 @@ var $canvas = document.getElementById("myCanvas");
 var ctx = $canvas.getContext("2d");
 
 // 시작
-// 1 
+// 1 ManagerGame.start()
 ManagerGame.getInstance().start(ctx);
 
 $canvas.style.border = "1px solid black";

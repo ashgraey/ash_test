@@ -26,8 +26,8 @@ export class ManagerImage {
         // // gameOver
         // this.managerImageSet("gameover", 150, 80, "image/gameover.jpg");
 
-        // // player
-        // this.managerImageSet("player", 50, 50, "image/gameover.jpg");
+        // player
+        this.managerImageSet("player", 100, 100, "image/player.png");
         // this.managerImageSet("heart", 60, 50, "image/heart.png");
 
         // // bolt
@@ -46,17 +46,18 @@ export class ManagerImage {
         // this.managerImageSet("meteo2", 80, 80, "image/meteo2.png");
 
         // stage 
-        this.managerImageSet("stage1", 400, 500, "image/stage_01.png");
-        this.managerImageSet("stage2", 400, 500, "image/stage_02.png");
-        this.managerImageSet("stage3", 400, 500, "image/stage_03.png");
-        this.managerImageSet("stage4", 400, 500, "image/stage_04.png");
-        this.managerImageSet("stage5", 400, 500, "image/stage_05.png");
+        // this.managerImageSet("stage1", 400, 500, "image/stage_01.png");
+        // this.managerImageSet("stage2", 400, 500, "image/stage_02.png");
+        // this.managerImageSet("stage3", 400, 500, "image/stage_03.png");
+        // this.managerImageSet("stage4", 400, 500, "image/stage_04.png");
+        // this.managerImageSet("stage5", 400, 500, "image/stage_05.png");
 
 
 
     };
 
     // imageSetting
+    // ex/ iamgeList["player"] = image.w, image.h, image.src
     managerImageSet(imageName, w, h, imagePath) {
         var nodeImage = new NodeImage(w, h, imagePath);
         this.imageList[imageName] = nodeImage;
