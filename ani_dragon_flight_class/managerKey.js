@@ -13,6 +13,8 @@ export class ManagerKey {
   }
 
   keyDownHandler = (e) => {
+    console.log(this.key);
+    console.log(this.shootkey);
     if (e.keyCode == 68) {
       this.key["right"] = true;
     } else if (e.keyCode == 65) {

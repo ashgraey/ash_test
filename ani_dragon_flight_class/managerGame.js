@@ -1,4 +1,4 @@
-// import { ManagerKey } from "./managerKey.js";
+import { ManagerKey } from "./managerKey.js";
 import { ManagerImage } from "./managerImage.js";
 import { ManagerScene } from "./managerScene.js";
 // import { ManagerPlayer } from "./managerPlayer.js";
@@ -13,7 +13,7 @@ export class ManagerGame {
     // 1 말그대로 start => 
     start(ctx) {
         this.ctx = ctx;
-        // ManagerKey.getInstance().start();
+        ManagerKey.getInstance().start();
         ManagerImage.getInstance().start(); // imageDB setting
         ManagerScene.getInstance().start(); // sceneDB setting
         ManagerStage.getInstance().start();
