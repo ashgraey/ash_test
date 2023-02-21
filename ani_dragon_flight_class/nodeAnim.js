@@ -41,6 +41,7 @@ export class NodeAnim {
         
     }
 
+    // 여기서 update 끝남
     nodeAnimUpdate(){
         if(this.playOn == false){
             return false;

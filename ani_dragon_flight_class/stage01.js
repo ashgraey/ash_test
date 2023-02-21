@@ -1,6 +1,7 @@
 // import { BackGroundList } from "./BackGroundList.js";
 import { ManagerImage } from "./managerImage.js";
 import { ManagerPlayer } from "./managerPlayer.js";
+import { ManagerSkill } from "./managerSkill.js";
 
 export class Stage01 {
   start() {
@@ -15,6 +16,8 @@ export class Stage01 {
   update() {
     this.bgListMove();
     ManagerPlayer.getInstance().update();
+    ManagerSkill.getInstance().update();
+  
   }
 
   draw() {
@@ -22,6 +25,7 @@ export class Stage01 {
     this.bgDraw();
 
     ManagerPlayer.getInstance().draw();
+    ManagerSkill.getInstance().draw();
   }
 
   // bg 메소드===========================================

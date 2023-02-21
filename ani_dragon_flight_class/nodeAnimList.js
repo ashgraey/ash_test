@@ -36,12 +36,13 @@ export class NodeAnimList {
         if(nodeAnim == null){
             return false;
         }
-      
+        
+        // nodeAnim = new nodeAnim()
         return nodeAnim.nodeAnimUpdate();
     }
 
   
-    nodeAnimListDraw(x , y ){
+    nodeAnimListDraw(x , y){
         var nodeAnim = this.animationList[this.curAnimName];
         if(nodeAnim == null){
             return ;

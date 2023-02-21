@@ -1,7 +1,7 @@
 import { ManagerGame } from "./managerGame.js";
 import { ManagerKey } from "./managerKey.js";
 import { NodeAnimList } from "./nodeAnimList.js";
-// import { ManagerSkill } from "./managerSkill.js";
+import { ManagerSkill } from "./managerSkill.js";
 
 export class UnitTestPlayer {
     constructor(xPos, yPos, speed, hpMax, power) {
@@ -59,10 +59,13 @@ export class UnitTestPlayer {
         console.log(d);
 
         if(j){
-            if(this.direction == "left"){    
-                ManagerSkill.getInstance().managerSkillPlay("skillSword" , "skill_sword_l", this.xPos - 150 , this.yPos +50  , "left" , this.power);
+            // console.log("야호")
+            // 입력은 받음
+            console.log(this.direction) 
+            if(this.direction == "left"){   
+                ManagerSkill.getInstance().managerSkillPlay("skillBolt" , "bolt_1", this.xPos , this.yPos  , "left" , this.power);
             }else if(this.direction == "right"){
-                ManagerSkill.getInstance().managerSkillPlay("skillSword" , "skill_sword_r", this.xPos + 150 , this.yPos +50 , "right" , this.power);
+                ManagerSkill.getInstance().managerSkillPlay("skillBolt" , "bolt_1", this.xPos + 150 , this.yPos +50 , "right" , this.power);
             }
         }
 

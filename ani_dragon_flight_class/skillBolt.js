@@ -1,0 +1,85 @@
+// import { ManagerGame } from "./managerGame.js";
+// import { ManagerMonster } from "./managerMonster.js";
+import { NodeAnimList } from "./nodeAnimList.js";
+
+export class SkillBolt {
+    // managerSkill에서 좌표 받아옴
+    constructor(xPos, yPos, unitType) {
+
+        this.xPos = xPos;
+        this.yPos = yPos;
+        // ======================
+        
+        // 잠시 대기
+        this.animationList = new NodeAnimList("skillBolt");
+        this.status = "ready";
+        this.animationTimeOn = false;
+        
+        // 충돌 세팅
+        this.setCollision();
+        this.direction = "left";
+        this.unitType = unitType;
+        
+    }
+
+    // 잠시 대기
+    setCollision(){
+        if(this.direction == "left"){
+            this.xCol = this.xPos + 20;
+            this.yCol = this.yPos + 40;
+            this.wCol = 210;
+            this.hCol = 220; 
+            this.zCol = this.yCol + this.hCol;
+            this.xColCenter = this.xCol + Number(this.wCol/2);
+            this.yColCenter = this.yCol + Number(this.hCol/2);
+        }else{
+            this.xCol = this.xPos + 80;
+            this.yCol = this.yPos + 40;
+            this.wCol = 210;
+            this.hCol = 220; 
+            this.zCol = this.yCol + this.hCol;
+            this.xColCenter = this.xCol + Number(this.wCol/2);
+            this.yColCenter = this.yCol + Number(this.hCol/2);
+        }
+    }
+
+    // 용도를 잘 모르겠음?
+    skillPlay(curSkillName , x , y , direction , power){
+        this.direction = direction;
+        this.xPos = x;
+        this.yPos = y;
+        this.animationList.nodeAnimListSkillAnim(curSkillName);
+        this.status = "play";
+        this.animationTimeOn = true;
+        this.power = power;
+        this.setCollision();
+        // this.monsterListCollision();
+    }
+
+    // update =================================
+    update() {
+        this.setCollision();
+        // ???
+        this.setAnimationCheck();
+    }
+
+    // ???
+    // 여기서 nodeAnimList upate로 넘어감
+    // update가 끝나는곳
+    setAnimationCheck() {
+        this.animationTimeOn = this.animationList.nodeAnimListUpdate();
+        if(this.animationTimeOn == false){
+            this.xPos = -1000;
+            this.yPos = -1000;
+        } 
+    }
+    
+    //============================
+
+    draw() {
+        this.animationList.nodeAnimListDraw(this.xPos, this.yPos);
+    }
+
+
+
+}

@@ -11,6 +11,7 @@ export class NodeImage {
         this.image.src = imagePath;
     }
 
+    // 여기서 모든 Object가 draw 됨
     nodeImageDraw(x, y) {
         // ctx.drawImage() => ctx 메서드
         // nodeImage()에서 그림을 그린다.

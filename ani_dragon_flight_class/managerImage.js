@@ -30,10 +30,10 @@ export class ManagerImage {
         this.managerImageSet("player", 100, 100, "image/player.png");
         // this.managerImageSet("heart", 60, 50, "image/heart.png");
 
-        // // bolt
-        // this.managerImageSet("bolt1", 40, 40, "image/bolt1.png");
-        // this.managerImageSet("bolt2", 40, 40, "image/bolt2.png");
-        // this.managerImageSet("bolt3", 40, 40, "image/bolt3.png");
+        // bolt
+        this.managerImageSet("bolt1", 40, 40, "image/bolt_1.png");
+        this.managerImageSet("bolt2", 40, 40, "image/bolt_2.png");
+        this.managerImageSet("bolt3", 40, 40, "image/bolt_3.png");
 
         // // enemy
         // this.managerImageSet("enemy1", 50, 50, "image/enmey1.png");

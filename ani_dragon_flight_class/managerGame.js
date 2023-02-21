@@ -5,7 +5,7 @@ import { ManagerStage } from "./managerStage.js";
 import { ManagerPlayer } from "./managerPlayer.js";
 
 import { ManagerAnim } from "./managerAnim.js";
-// import { ManagerSkill } from "./managerSkill.js";
+import { ManagerSkill } from "./managerSkill.js";
 
 export class ManagerGame {
     static instance = new ManagerGame()
@@ -26,7 +26,7 @@ export class ManagerGame {
         ManagerAnim.getInstance().start();
         ManagerPlayer.getInstance().start();
         // 구현 중
-        // ManagerSkill.getInstance().start();
+        ManagerSkill.getInstance().start(); // skillBolt == new SkillBolt;
         ManagerScene.getInstance().changeScene("title"); // curScene이 title인지 아닌지 검사, title이면 return 계속 타이틀 화면을 유지
     }
 
