@@ -65,7 +65,7 @@ export class SkillBolt {
 
     // ???
     // 여기서 nodeAnimList upate로 넘어감
-    // update가 끝나는곳
+    // update 끝
     setAnimationCheck() {
         this.animationTimeOn = this.animationList.nodeAnimListUpdate();
         if(this.animationTimeOn == false){

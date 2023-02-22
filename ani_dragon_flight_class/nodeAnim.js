@@ -10,7 +10,8 @@ export class NodeAnim {
         this.size = this.animation.length;
         this.playOn = false;
     }
-
+    
+    // ManagerScene.getInstance().changeScene("title"); 여기서 끝남
     nodeAnimPlay(){
         this.playOn = true;
         this.index = 0;

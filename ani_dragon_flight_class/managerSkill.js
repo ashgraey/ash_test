@@ -26,7 +26,7 @@ export class ManagerSkill {
         this.skillObjectListAll[skillName].push(bolt);
       }
     }
-    // console.log(this.skillObjectListAll["skillBolt"])
+    // console.log(this.skillObjectListAll);
   }
 
   getSkillBolt() {
@@ -38,7 +38,8 @@ export class ManagerSkill {
     return skillBolt;
   }
 
-  // 용도를 잘 모르겠음?
+  // unitTsetPlayer에서 넘어옴
+  // unit이 키값을 입력면 스킬이 나오도록
   managerSkillPlay(skillName, skillDirName, x, y, direction, power) {
     var skillObjectList = this.skillObjectListAll[skillName];
     for (var j = 0; j < skillObjectList.length; j++) {
@@ -48,6 +49,7 @@ export class ManagerSkill {
         break;
       }
     }
+    console.log(skillObjectList);
   }
 
   update() {

@@ -5,6 +5,7 @@ export class NodeAnimList {
         this.curAnimName = "";
         this.animationList = ManagerAnim.getInstance().getNodeAnimList(unitName);  
     }
+    
     nodeAnimListChangeAnim(nextAnimName){
       
         if(this.curAnimName == nextAnimName){

@@ -56,26 +56,27 @@ export class UnitTestPlayer {
 
         var j = ManagerKey.getInstance().getKeyOnce("KeyJ");
         var k = ManagerKey.getInstance().getKeyOnce("KeyK");
-        console.log(d);
+        // console.log(d);
 
         if(j){
             // console.log("야호")
             // 입력은 받음
-            console.log(this.direction) 
-            if(this.direction == "left"){   
-                ManagerSkill.getInstance().managerSkillPlay("skillBolt" , "bolt_1", this.xPos , this.yPos  , "left" , this.power);
-            }else if(this.direction == "right"){
-                ManagerSkill.getInstance().managerSkillPlay("skillBolt" , "bolt_1", this.xPos + 150 , this.yPos +50 , "right" , this.power);
+            // console.log(this.direction);
+            if(this.direction == "up"){   
+                ManagerSkill.getInstance().managerSkillPlay("skillBolt" , "bolt_1", this.xPos , this.yPos  , "up" , this.power);
+                console.log(this.direction) 
+            }else if(this.direction == "up"){
+                ManagerSkill.getInstance().managerSkillPlay("skillBolt" , "bolt_1", this.xPos + 150 , this.yPos +50 , "up" , this.power);
             }
         }
 
-        if(k){
-            if(this.direction == "left"){        
+        // if(k){
+        //     if(this.direction == "left"){        
              
-            }else if(this.direction == "right"){
+        //     }else if(this.direction == "right"){
              
-            }
-         }
+        //     }
+        //  }
 
         if(d){
             this.animationList.nodeAnimListChangeAnim("player");

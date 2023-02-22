@@ -5,7 +5,7 @@ import { ManagerScene } from "./managerScene.js";
 
 export class SceneTitle {
     start() {
-        console.log("yes")
+        // console.log("yes")
         document.addEventListener("click", this.mouseClickEvent, true);
     }
     update() {
