@@ -16,6 +16,7 @@ export class NodeImage {
         // ctx.drawImage() => ctx 메서드
         // nodeImage()에서 그림을 그린다.
         // ctx.drawImage(new Image, 좌표 x, 좌표 y, 가로, 세로)
+        
         ManagerGame.getInstance().ctx.drawImage(this.image, x, y, this.image.width, this.image.height);
     }
 }
