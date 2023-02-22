@@ -31,9 +31,9 @@ export class ManagerImage {
         // this.managerImageSet("heart", 60, 50, "image/heart.png");
 
         // bolt
-        this.managerImageSet("bolt_1", 40, 40, "image/bolt_1.png");
-        this.managerImageSet("bolt_2", 40, 40, "image/bolt_2.png");
-        this.managerImageSet("bolt_3", 40, 40, "image/bolt_3.png");
+        this.managerImageSet("bolt_1", 100, 100, "image/bolt_1.png");
+        this.managerImageSet("bolt_2", 100, 100, "image/bolt_2.png");
+        this.managerImageSet("bolt_3", 100, 100, "image/bolt_3.png");
 
         // // enemy
         // this.managerImageSet("enemy1", 50, 50, "image/enmey1.png");
@@ -61,6 +61,7 @@ export class ManagerImage {
     managerImageSet(imageName, w, h, imagePath) {
         var nodeImage = new NodeImage(w, h, imagePath);
         this.imageList[imageName] = nodeImage;
+        // console.log(this.imageList)
     };
 
     // 가오용 

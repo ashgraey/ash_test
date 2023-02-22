@@ -23,10 +23,10 @@ export class ManagerAnim {
     var unitName = "skillBolt";
     this.animSampleListAll[unitName] = [];
 
-    var nodeAnimSample = new NodeAnimSample("once", 10, "skillBolt", [
+    var nodeAnimSample = new NodeAnimSample("once", 10, "bolt_1", [
       "bolt_1",
-      "bolt_1",
-      "bolt_1",
+      "bolt_2",
+      "bolt_3",
     ]);
     this.animSampleListAll[unitName].push(nodeAnimSample);
 

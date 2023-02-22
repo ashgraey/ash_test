@@ -59,15 +59,18 @@ export class UnitTestPlayer {
         // console.log(d);
 
         if(j){
+            // j를 입력받으면 Bolt가 나가도록 설정
+            ManagerSkill.getInstance().managerSkillPlay("skillBolt" , "bolt_1", this.xPos , this.yPos - 100, "up" , this.power);
+            
             // console.log("야호")
             // 입력은 받음
             // console.log(this.direction);
-            if(this.direction == "up"){   
-                ManagerSkill.getInstance().managerSkillPlay("skillBolt" , "bolt_1", this.xPos , this.yPos  , "up" , this.power);
-                console.log(this.direction) 
-            }else if(this.direction == "up"){
-                ManagerSkill.getInstance().managerSkillPlay("skillBolt" , "bolt_1", this.xPos + 150 , this.yPos +50 , "up" , this.power);
-            }
+            // if(this.direction == "up"){   
+            //     ManagerSkill.getInstance().managerSkillPlay("skillBolt" , "bolt_1", this.xPos , this.yPos  , "up" , this.power);
+            //     console.log(this.direction) 
+            // }else if(this.direction == "up"){
+            //     ManagerSkill.getInstance().managerSkillPlay("skillBolt" , "bolt_1", this.xPos + 150 , this.yPos +50 , "up" , this.power);
+            // }
         }
 
         // if(k){
