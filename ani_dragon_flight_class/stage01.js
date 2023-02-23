@@ -2,6 +2,7 @@
 import { ManagerImage } from "./managerImage.js";
 import { ManagerPlayer } from "./managerPlayer.js";
 import { ManagerSkill } from "./managerSkill.js";
+import { ManagerMonster } from "./managerMonster.js";
 
 export class Stage01 {
   start() {
@@ -11,12 +12,15 @@ export class Stage01 {
 
     // 여기서 플레이어 좌표 넘김
     ManagerPlayer.getInstance().setPlayer(150, 500);
+    // 몬스터 세팅
+    ManagerMonster.getInstance().setCyclopsList(5, 0, -100);
   }
 
   update() {
     this.bgListMove();
     ManagerPlayer.getInstance().update();
     ManagerSkill.getInstance().update();
+    ManagerMonster.getInstance().update();
   
   }
 
@@ -26,6 +30,7 @@ export class Stage01 {
 
     ManagerPlayer.getInstance().draw();
     ManagerSkill.getInstance().draw();
+    ManagerMonster.getInstance().draw();
   }
 
   // bg 메소드===========================================

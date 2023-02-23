@@ -36,7 +36,7 @@ export class ManagerImage {
         this.managerImageSet("bolt_3", 100, 100, "image/bolt_3.png");
 
         // // enemy
-        // this.managerImageSet("enemy1", 50, 50, "image/enmey1.png");
+        this.managerImageSet("enemy1", 100, 100, "image/enemy1.png");
 
         // // item 
         // this.managerImageSet("item1", 50, 50, "image/item1.png");

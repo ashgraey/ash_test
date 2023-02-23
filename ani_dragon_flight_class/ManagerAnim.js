@@ -17,7 +17,32 @@ export class ManagerAnim {
   setAnimSampleListAll() {
     this.setAnimPlayer();
     this.setAnimSkillBolt();
+    this.setAnimCyclops();
   }
+
+  setAnimCyclops(){
+    var unitName = "enemy1";
+    this.animSampleListAll[unitName] = [];      
+
+    var nodeAnimSample = new NodeAnimSample("loop", 20, "enemy1", 
+        ["enemy1" , "enemy1" , "enemy1"]);
+    this.animSampleListAll[unitName].push(nodeAnimSample);
+
+    // var nodeAnimSample = new NodeAnimSample("loop", 20, "cyclops_idle_r", 
+    //     ["사이클롭스_가만히_r_01" , "사이클롭스_가만히_r_02" , "사이클롭스_가만히_r_03"]);
+    // this.animSampleListAll[unitName].push(nodeAnimSample);
+
+    // var nodeAnimSample = new NodeAnimSample("loop", 20, "cyclops_work_l", 
+    //     ["사이클롭스_이동_l_01" , "사이클롭스_이동_l_02" , "사이클롭스_이동_l_03" , "사이클롭스_이동_l_04" , "사이클롭스_이동_l_05"]);
+    // this.animSampleListAll[unitName].push(nodeAnimSample);
+
+    // var nodeAnimSample = new NodeAnimSample("loop", 20, "cyclops_work_r", 
+    //     ["사이클롭스_이동_r_01" , "사이클롭스_이동_r_02" , "사이클롭스_이동_r_03" , "사이클롭스_이동_r_04" , "사이클롭스_이동_r_05"]);
+    // this.animSampleListAll[unitName].push(nodeAnimSample);
+
+    
+
+}
 
   setAnimSkillBolt() {
     var unitName = "skillBolt";
