@@ -1,5 +1,5 @@
 import { ManagerPlayer } from "./managerPlayer.js";
-import { UnitCyclops } from "./unitCyclops.js";
+import { UnitEnemy } from "./unitEnemy.js";
 // import { UnitOrc } from "./unitOrc.js";
 
 export class ManagerMonster {
@@ -10,15 +10,15 @@ export class ManagerMonster {
 
     start() {
         this.monsterListAll = {};
-        // this.setCyclopsList();
+        
     }
     
-    setCyclopsList(size , x , y){ // 10 1700 200 
-        var monsterName = "enemy1";     
-        this.monsterSize = size;k
+    setEnemysList(size , x , y){ // 10 1700 200 
+        var monsterName = "enemy";     
+        this.monsterSize = size;
         this.monsterListAll[monsterName] = [];
         for (var j = 0; j < this.monsterSize; j++){  
-            var monster = new UnitCyclops(x , y); // 1700 200 
+            var monster = new UnitEnemy(x , y); // 1700 200 
             // target 설정
             var target = ManagerPlayer.getInstance().testPlayer;
             monster.target = target;

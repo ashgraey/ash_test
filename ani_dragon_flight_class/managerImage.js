@@ -16,7 +16,7 @@ export class ManagerImage {
     // imageList객체 생성
     managerImageSetList() {
         // title 
-        this.managerImageSet("title", 400, 800, "image/title.png");
+        this.managerImageSet("title", 400, 600, "image/title.png");
 
         // backGround
         this.managerImageSet("bg1", 400, 500, "image/stage_01.png");
@@ -27,7 +27,9 @@ export class ManagerImage {
         // this.managerImageSet("gameover", 150, 80, "image/gameover.jpg");
 
         // player
-        this.managerImageSet("player", 100, 100, "image/player.png");
+        this.managerImageSet("player", 120, 120, "image/player.png");
+        this.managerImageSet("player2", 120, 120, "image/player2.png");
+        this.managerImageSet("player3", 120, 120, "image/player3.png");
         // this.managerImageSet("heart", 60, 50, "image/heart.png");
 
         // bolt
@@ -37,6 +39,10 @@ export class ManagerImage {
 
         // // enemy
         this.managerImageSet("enemy1", 100, 100, "image/enemy1.png");
+        this.managerImageSet("enemy2", 100, 100, "image/enemy2.png");
+        this.managerImageSet("enemy3", 100, 100, "image/enemy3.png");
+        
+
 
         // // item 
         // this.managerImageSet("item1", 50, 50, "image/item1.png");

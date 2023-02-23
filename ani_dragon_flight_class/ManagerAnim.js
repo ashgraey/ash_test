@@ -17,10 +17,10 @@ export class ManagerAnim {
   setAnimSampleListAll() {
     this.setAnimPlayer();
     this.setAnimSkillBolt();
-    this.setAnimCyclops();
+    this.setAnimEnemys();
   }
 
-  setAnimCyclops(){
+  setAnimEnemys(){
     var unitName = "enemy1";
     this.animSampleListAll[unitName] = [];      
 
@@ -66,8 +66,8 @@ export class ManagerAnim {
 
     var nodeAnimSample = new NodeAnimSample("loop", 20, "player", [
       "player",
-      "player",
-      "player",
+      "player2",
+      "player3",
     ]);
     this.animSampleListAll[unitName].push(nodeAnimSample);
     // console.log(this.animSampleListAll);
@@ -97,6 +97,7 @@ export class ManagerAnim {
     var animationUnit = {};
     var animSampleList = this.animSampleListAll[unitName];
     //  console.log(animSampleList);
+    
     //????
     for (var index1 in animSampleList) {
       var animationList = [];

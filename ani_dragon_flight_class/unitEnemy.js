@@ -1,19 +1,19 @@
 import { ManagerGame } from "./managerGame.js";
 import { NodeAnimList } from "./nodeAnimList.js";
 
-export class UnitCyclops {
+export class UnitEnemy {
     constructor(xPos, yPos) {
-        this.xPos = xPos;
-        this.yPos = yPos;
+        this.xPos = xPos; // -100
+        this.yPos = yPos; // -100
 
 
-        this.speed = 1.1;
-        this.hpMax = 100;
+        this.speed = 1.5;
+        this.hpMax = 50;
         this.hp = this.hpMax;
         this.power = 8;
 
         
-        this.direction = "right";
+        this.direction = "left";
         this.dead = false;    
         this.animationList = new NodeAnimList("enemy1");
         this.animationList.nodeAnimListChangeAnim("enemy1");
@@ -63,7 +63,7 @@ export class UnitCyclops {
     }
 
     draw(){
-        console.log(this.animationList);
+        // console.log(this.animationList);
 
         if(this.hit == true){
             if(this.startTime % 10 < 5){
@@ -73,13 +73,13 @@ export class UnitCyclops {
         }else{
             this.animationList.nodeAnimListDraw(this.xPos , this.yPos);
         }
-           //    this.drawBox();
+            //   this.drawBox();
     }
 
     drawBox(){
-        ManagerGame.getInstance().ctx.beginPath () ;
+        ManagerGame.getInstance().ctx.beginPath ();
         ManagerGame.getInstance().ctx.strokeRect(this.xCol, this.yCol, this.wCol, this.hCol);
-        ManagerGame.getInstance().ctx.closePath () ;
+        ManagerGame.getInstance().ctx.closePath ();
     }
 
 
@@ -195,7 +195,7 @@ export class UnitCyclops {
        } if(this.target.xColCenter >= this.xColCenter && this.target.xColCenter - 300 <= this.xColCenter){
             this.direction = "right";
             var r = Math.floor(Math.random() * 2);
-            if( r == 0){
+            if(r == 0){
                 if(this.target.yColCenter < this.yColCenter){
                     this.ai = "moveup";
                 }else {

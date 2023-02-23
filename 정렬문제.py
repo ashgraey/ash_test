@@ -116,22 +116,61 @@ a = [
     [1, 4, 7]
 ]
 
+# for i in range(len(a)):
+#     min = a[i][0]
+#     minIdx = i
+#     for j in range(i, len(a)):
+#         if min > a[j][0]:
+#             min = a[j][0]
+#             minIdx = j
+
+#     temp = a[i]
+#     a[i] = a[minIdx]
+#     a[minIdx] = temp
+
+
+# # temp = a[2]
+# # a[2] = a[4]
+# # a[4] = temp
+# a[3], a[4] = a[4], a[3]
+# for i in a:
+#     print(i)
+
+# 쌤 정답
+print("---------------")
 for i in range(len(a)):
-    min = a[i][0]
-    minIdx = i
-    for j in range(i, len(a)):
-        if min > a[j][0]:
-            min = a[j][0]
-            minIdx = j
+    print(a[i])
+print("---------------")
+for i in range(len(a)):
+    for j in range(i + 1 , len(a)):
+        # 짧은거 기준으로 돌아야 에러가 안난다.
+        length = 0
+        size1 = len(a[i])
+        size2 = len(a[j])
+        # 짧은거를 length에 담는다
+        if size1 > size2:
+            length = size2
+        else:
+            length = size1
+        count = 0
+        # 짧은 배열안에서 각 값들을 비교한다.
+        for k in range(length):
+            if a[i][k] > a[j][k]:
+                temp = a[i]
+                a[i] = a[j]
+                a[j] = temp
+                break
+            # 전부 값이 같은지 카운트
+            if a[i][k] == a[j][k]:
+                count += 1
+        # 전부 값이 같으면 길이로 비교한다. 
+        if count == length:
+            if size1 > size2:
+                temp = a[i]
+                a[i] = a[j]
+                a[j] = temp
+print("---------------")
+for i in range(len(a)):
+    print(a[i])
+print("---------------")
 
-    temp = a[i]
-    a[i] = a[minIdx]
-    a[minIdx] = temp
-
-
-# temp = a[2]
-# a[2] = a[4]
-# a[4] = temp
-a[3], a[4] = a[4], a[3]
-for i in a:
-    print(i)

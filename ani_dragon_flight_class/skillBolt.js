@@ -1,5 +1,5 @@
-// import { ManagerGame } from "./managerGame.js";
-// import { ManagerMonster } from "./managerMonster.js";
+import { ManagerGame } from "./managerGame.js";
+import { ManagerMonster } from "./managerMonster.js";
 import { NodeAnimList } from "./nodeAnimList.js";
 
 export class SkillBolt {
@@ -53,7 +53,7 @@ export class SkillBolt {
         this.animationTimeOn = true;
         this.power = power;
         this.setCollision();
-        // this.monsterListCollision();
+        this.monsterListCollision();
     }
 
     // update =================================
@@ -78,6 +78,62 @@ export class SkillBolt {
 
     draw() {
         this.animationList.nodeAnimListDraw(this.xPos, this.yPos);
+    }
+    // collison
+    monsterListCollision(){
+        var monsterListAll = ManagerMonster.getInstance().monsterListAll;
+
+        for (var name in monsterListAll){
+            var monstertList = monsterListAll[name];
+            for (var i = 0; i < monstertList.length; i++ ){
+                var monster  = monstertList[i];
+                var result = this.getRectCollision(monster.xCol , monster.yCol , monster.wCol , monster.hCol);
+                if(result){
+                    monster.setHit(this.power);
+
+                }
+            }
+        }  
+    }
+
+    getRectCollision(xOther , yOther , wOther , hOther){
+        this.path = new Path2D(); // 충돌용    
+        this.path.rect(this.xCol, this.yCol, this.wCol, this.hCol);
+
+        console.log(this.xCol, this.yCol, this.wCol, this.hCol);
+        console.log(xOther , yOther , wOther , hOther);
+  
+
+        var result = ManagerGame.getInstance().ctx.isPointInPath(this.path , xOther , yOther);
+        console.log(result);
+        if(result){
+            this.path = null;
+            return true;
+        }
+
+        result = ManagerGame.getInstance().ctx.isPointInPath(this.path , xOther + wOther, yOther);
+        console.log(result);
+        if(result){
+            this.path = null;
+            return true;
+        }
+
+        result = ManagerGame.getInstance().ctx.isPointInPath(this.path , xOther , yOther + hOther) 
+        console.log(result);
+
+        if(result){
+            this.path = null;
+            return true;
+        }
+
+        result = ManagerGame.getInstance().ctx.isPointInPath(this.path , xOther + wOther, yOther + hOther);
+        console.log(result);
+
+        if(result){
+            this.path = null;
+            return true;
+        }
+        return false;
     }
 
 
