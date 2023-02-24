@@ -11,12 +11,12 @@ export class ManagerPlayer {
         this.speed = 2;
         // this.color = "blue";
         this.hpMax = 10;
-        this.power = 10;
+        this.power = 30;
         this.testPlayer = null;
     }
 
     setPlayer(x, y) {
-        this.testPlayer = new UnitTestPlayer(x, y, this.speed, this.hpMax);
+        this.testPlayer = new UnitTestPlayer(x, y, this.speed, this.hpMax, this.power);
     }
 
     update(){

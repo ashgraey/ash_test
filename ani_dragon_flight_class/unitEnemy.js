@@ -32,6 +32,7 @@ export class UnitEnemy {
         this.hit = false;
         this.hitStartTime = 0;
         this.hitDelayTime = 100;
+  
     }
 
     setCollision(){
@@ -99,6 +100,7 @@ export class UnitEnemy {
             return;
         }
         this.hit = true;
+        console.log("otherPower : ", otherPower)
     }
 
     hitTimer(){

@@ -54,6 +54,8 @@ export class SkillBolt {
         this.power = power;
         this.setCollision();
         this.monsterListCollision();
+        // power값이 안들어옴 undefined
+        console.log("power : ", this.power)
     }
 
     // update =================================

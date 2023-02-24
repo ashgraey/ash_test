@@ -13,7 +13,7 @@ export class Stage01 {
     // 여기서 플레이어 좌표 넘김
     ManagerPlayer.getInstance().setPlayer(150, 500);
     // 몬스터 세팅
-    ManagerMonster.getInstance().setEnemysList(5, -100, -100);
+    ManagerMonster.getInstance().setEnemysList(30, 0, 0);
   }
 
   update() {
