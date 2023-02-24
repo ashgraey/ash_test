@@ -65,9 +65,10 @@ export class ManagerAnim {
     this.animSampleListAll[unitName] = [];
 
     var nodeAnimSample = new NodeAnimSample("loop", 20, "player", [
-      "player",
       "player2",
+      // "player",
       "player3",
+      
     ]);
     this.animSampleListAll[unitName].push(nodeAnimSample);
     // console.log(this.animSampleListAll);
